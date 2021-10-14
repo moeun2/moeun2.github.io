@@ -1,7 +1,7 @@
 ### Site Settings ###
 title: moeun2
 description: >-
-  Fais de ta vie un rêve, 
+  Fais de ta vie un rêve,<br>
   et d'un rêve, une réalité.🌹
 baseurl: "" # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository: moeun2/moeun2.github.io # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
