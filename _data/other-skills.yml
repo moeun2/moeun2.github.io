@@ -1,7 +1,7 @@
-- name: Adobe Photoshop
+- name: Spring
   percentage: 95
   color: info
 
-- name: Adobe Illustrator
+- name: Android Studio
   percentage: 90
   color: success
