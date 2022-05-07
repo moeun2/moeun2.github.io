@@ -1,6 +1,6 @@
 ---
-title: CS_Data-Structure
-tags: [CS, Computer Architecture]
+title: Data_Structure
+tags: [CS, Data Structure]
 style: fill
 color: warning
 description: [5/2~5/8] 공부한 CS 정리본(Data Structure)입니다. 아래 참고링크의 문서를 보며 공부중입니다. PDF 정리본은 계속 업데이트 될 예정입니다.
