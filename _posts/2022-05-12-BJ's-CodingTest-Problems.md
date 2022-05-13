@@ -78,3 +78,25 @@ while True :
 
 </div>
 </details>
+
+# 이항 계수 1
+
+⚡[문제링크](https://www.acmicpc.net/problem/11050)
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
+```python
+import math
+n,k = map(int, input().split())
+if(k < 0):
+    print(0)
+elif k <= n:
+    print(int(math.factorial(n) / (math.factorial(k) * math.factorial(n-k))))
+else:
+    print(0)
+```
+
+</div>
+</details>
