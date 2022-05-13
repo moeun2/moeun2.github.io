@@ -8,9 +8,10 @@ description: ⏰ last update 2022/05/13 <br/> I'm solving the 2+ coding problems
 
 {% capture list_items %}
 제로
+균형잡힌 세상
+이항 계수 1
 {% endcapture %}
 {% include elements/list.html title="Table of Contents" type="toc" %}
-
 
 
 # 제로(Class 2+/Silver4 )
