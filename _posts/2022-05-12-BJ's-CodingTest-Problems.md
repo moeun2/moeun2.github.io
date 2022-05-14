@@ -135,3 +135,29 @@ print(int(lcd(a, b)))
 
 </div>
 </details>
+
+
+
+# 요세푸스 문제0
+
+⚡[문제링크](https://www.acmicpc.net/problem/11866)
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
+```python
+n, k = map(int, input().split())
+list = [x for x in range(1,n+1)]
+idx = k-1
+answer =[]
+while list:
+    idx = idx % len(list)
+    answer.append(str(list.pop(idx)))
+    idx += (k-1)
+
+print('<'+', '.join(answer)+'>')
+```
+
+</div>
+</details>
