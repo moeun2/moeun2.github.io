@@ -10,6 +10,7 @@ description: ⏰ last update 2022/05/13 <br/> I'm solving the 2+ coding problems
 제로
 균형잡힌 세상
 이항 계수 1
+최대공약수와 최소공배수
 {% endcapture %}
 {% include elements/list.html title="Table of Contents" type="toc" %}
 
@@ -97,6 +98,39 @@ elif k <= n:
     print(int(math.factorial(n) / (math.factorial(k) * math.factorial(n-k))))
 else:
     print(0)
+```
+
+</div>
+</details>
+
+
+
+# 최대공약수와 최소공배수
+
+⚡[문제링크](https://www.acmicpc.net/problem/2609)
+
+⚡[유클리드 알고리즘](https://moeun2.github.io/blog/Algorithm#:~:text=유클리드-알고리즘(Euclidean-Algorithm))
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
+```python
+def gcd(a, b):
+    if b == 0:
+        return a
+    else:
+        return gcd(b, a % b)
+
+
+def lcd(a, b):
+    return (a * b) / gcd(a, b)
+
+
+a, b = map(int, input().split())
+print(int(gcd(a, b)))
+print(int(lcd(a, b)))
+
 ```
 
 </div>
