@@ -7,10 +7,11 @@ description: ⏰ last update 2022/05/13 <br/> I'm solving the 2+ coding problems
 ---
 
 {% capture list_items %}
-제로
-균형잡힌 세상
-이항 계수 1
-최대공약수와 최소공배수
+제로(Class 2+/Silver4 )
+균형잡힌 세상(Class 2+/Silver 4)
+이항 계수 1(Class 2+/Bronze 1)
+최대공약수와 최소공배수(Class 2+/Silver 5)
+요세푸스 문제 0(Class 2+/Silver4)
 {% endcapture %}
 {% include elements/list.html title="Table of Contents" type="toc" %}
 
@@ -41,7 +42,7 @@ print(answer)
 
 
 
-# 균형잡힌 세상
+# 균형잡힌 세상(Class 2+/Silver 4)
 
 ⚡[문제링크](https://www.acmicpc.net/problem/10773)
 
@@ -81,7 +82,7 @@ while True :
 </div>
 </details>
 
-# 이항 계수 1
+# 이항 계수 1(Class 2+/Bronze 1)
 
 ⚡[문제링크](https://www.acmicpc.net/problem/11050)
 
@@ -105,7 +106,7 @@ else:
 
 
 
-# 최대공약수와 최소공배수
+# 최대공약수와 최소공배수(Class 2+/Silver 5)
 
 ⚡[문제링크](https://www.acmicpc.net/problem/2609)
 
@@ -138,7 +139,7 @@ print(int(lcd(a, b)))
 
 
 
-# 요세푸스 문제0
+# 요세푸스 문제 0(Class 2+/Silver4)
 
 ⚡[문제링크](https://www.acmicpc.net/problem/11866)
 
