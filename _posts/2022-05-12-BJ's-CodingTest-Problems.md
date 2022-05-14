@@ -3,7 +3,7 @@ title: BJ's CodingTest Problems
 tags: [CodingTest, BJ]
 style: fill
 color: info
-description: ⏰ last update 2022/05/13 <br/> I'm solving the 2+ coding problems of  "solved.ac" and summarizing. 
+description: ⏰ last update 2022/05/15 <br/> I'm solving the 2+ coding problems of  "solved.ac" and summarizing. 
 ---
 
 {% capture list_items %}
