@@ -7,23 +7,92 @@
 -->
 
 <html lang="en" class="h-100">
+  {% include head.html %}
 
-{% include head.html %}
+  <body class="h-100 d-flex flex-column">
+    <main class="flex-shrink-0 container mt-5">
+      {% include navbar.html %}
+      <div class="page__content">{{ content }}</div>
+    </main>
+    {% include footer.html %} {% include analytics.html %} {% include
+    scripts.html %} {%- if site.buymeacoffee.enabled == true -%}
+    <script
+      data-name="BMC-Widget"
+      data-cfasync="false"
+      src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+      data-id="{{ site.buymeacoffee.username }}"
+      data-description="{{ site.buymeacoffee.description }}"
+      data-message="{{ site.buymeacoffee.message }}"
+      data-color="{{ site.buymeacoffee.color }}"
+      data-position="Right"
+      data-x_margin="16"
+      data-y_margin="16"
+    ></script>
+    {%- endif -%}
+  </body>
+  <script src="../assets/js/plugins/clipboard.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.14/dist/sweetalert2.all.min.js"></script>
+  <style>
+    .header-link {
+      position: relative;
+      left: 0.5em;
+      opacity: 1;
+      font-size: 0.8em;
+      -webkit-transition: opacity 0.2s ease-in-out 0.1s;
+      -moz-transition: opacity 0.2s ease-in-out 0.1s;
+      -o-transition: opacity 0.2s ease-in-out 0.1s;
+      transition: opacity 0.2s ease-in-out 0.1s;
+    }
+  </style>
 
-<body class="h-100 d-flex flex-column">
+  <script>
+    $(".page__content")
+      .find("h1")
+      .each(function () {
+        var id = $(this).attr("id");
+        if (id) {
+          var anchor = document.createElement("a");
+          var addr = location.origin + location.pathname + "#" + id;
+          anchor.className = "header-link";
+          anchor.href = "#" + id;
+          // sammy baek custom
+          anchor.innerHTML = `<span class=\"sr-only\">${addr}</span><i class=\"fas fa-link\"></i>`;
+          anchor.title = "Copy this URL";
+          anchor.setAttribute("data-clipboard-text", addr);
+          $(this).append(anchor);
+        }
+      });
 
-  <main class="flex-shrink-0 container mt-5">
-    {% include navbar.html %}
-    {{ content }}
-  </main>
-  {% include footer.html %}
+    $(function () {
+      var clipboard = new ClipboardJS(".header-link");
+      clipboard.on("success", function (e) {
+        // simpleNotice.show('URL을 클립보드에 복사하였습니다.');
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 1500,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.addEventListener("mouseenter", Swal.stopTimer);
+            toast.addEventListener("mouseleave", Swal.resumeTimer);
+          },
+        });
 
-  {% include analytics.html %}
-  {% include scripts.html %}
-
-  {%- if site.buymeacoffee.enabled == true -%}
-    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="{{ site.buymeacoffee.username }}" data-description="{{ site.buymeacoffee.description }}" data-message="{{ site.buymeacoffee.message }}" data-color="{{ site.buymeacoffee.color }}" data-position="Right" data-x_margin="16" data-y_margin="16"></script>
-  {%- endif -%}
-</body>
-
+        Toast.fire({
+          icon: "success",
+          title: "URL copy success",
+        });
+        // console.info('Text:' , e.text)
+        e.clearSelection();
+      });
+      // clipboard.on('error', function(e) {
+      // });
+      var clipboardShareOn = new ClipboardJS("#shareon-clipboard");
+      clipboardShareOn.on("success", function (e) {
+        // simpleNotice.show('URL을 클립보드에 복사하였습니다.');
+        e.clearSelection();
+      });
+    });
+  </script>
 </html>
