@@ -13,6 +13,7 @@ description: ⏰ last update 2022/05/18 <br/> I'm solving the 2+ coding problems
 최대공약수와 최소공배수(Class 2/Silver 5)
 요세푸스 문제 0(Class 2/Silver4)
 스택(Class 2/Silver4)
+프린터 큐(Class 2/Silver3)
 {% endcapture %}
 {% include elements/list.html title="Table of Contents" type="toc" %}
 
@@ -206,11 +207,44 @@ for i in range(n):
             print(list[-1])
         else:
             print(-1)
+```
+
+</div>
+</details>
 
 
 
+# 프린터 큐(Class 2/Silver3)
 
+⚡[문제링크](https://www.acmicpc.net/problem/1966)
 
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
+```python
+t = int(input())  # 테스트케이스 수
+for i in range(t):
+    n, m = map(int, input().split())  # 문서의 개수 / 몇 번째로 인쇄되었는지 궁금한 문서
+    documents = []
+    num = list(map(int, input().split()))
+
+    for j in enumerate(num):
+        documents.append(j)
+
+    order = 0
+    while documents:
+        maxTemp = max(documents, key=lambda x: x[1])
+
+        if maxTemp[1] > documents[0][1]:
+            documents.append(documents.pop(0))
+        elif maxTemp[0] == documents[0][0]:
+            temp = documents.pop(0)
+            order += 1
+            if temp[0] == m:
+                break
+
+    print(order)
 ```
 
 </div>
