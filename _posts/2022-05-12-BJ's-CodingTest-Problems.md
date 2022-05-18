@@ -7,18 +7,23 @@ description: ⏰ last update 2022/05/18 <br/> I'm solving the 2+ coding problems
 ---
 
 {% capture list_items %}
-제로(Class 2/Silver4 )
-균형잡힌 세상(Class 2/Silver 4)
-이항 계수 1(Class 2/Bronze 1)
-최대공약수와 최소공배수(Class 2/Silver 5)
-요세푸스 문제 0(Class 2/Silver4)
-스택(Class 2/Silver4)
-프린터 큐(Class 2/Silver3)
+제로
+균형잡힌 세상
+이항 계수 1
+최대공약수와 최소공배수
+요세푸스 문제 0
+스택
+프린터 큐
 {% endcapture %}
 {% include elements/list.html title="Table of Contents" type="toc" %}
 
 
-# 제로(Class 2/Silver4 )
+# 제로
+
+
+| 문제번호 | class | level|language|
+|--- | :---: | :--- :| --- :|
+|10773 | class2 | silver4 | python|
 
 ⚡[문제링크](https://www.acmicpc.net/problem/10773)
 
@@ -42,11 +47,15 @@ print(answer)
 </div>
 </details>
 
+---
 
+# 균형잡힌 세상
 
-# 균형잡힌 세상(Class 2/Silver 4)
+| 문제번호 | class | level|language|
+|--- | :---: | :--- :| --- :|
+|4949 | class2 | silver4 | python
 
-⚡[문제링크](https://www.acmicpc.net/problem/10773)
+⚡[문제링크](https://www.acmicpc.net/problem/4949)
 
 <details>
 <summary>View Code...</summary>
@@ -83,8 +92,16 @@ while True :
 
 </div>
 </details>
+---
 
-# 이항 계수 1(Class 2/Bronze 1)
+# 이항 계수 1
+
+
+| 문제번호 | class | level|language|
+|--- | :---: | :--- :| --- :|
+|11050 | class2 | bronze1 | python
+
+
 
 ⚡[문제링크](https://www.acmicpc.net/problem/11050)
 
@@ -106,9 +123,13 @@ else:
 </div>
 </details>
 
+---
 
+# 최대공약수와 최소공배수
 
-# 최대공약수와 최소공배수(Class 2/Silver 5)
+| 문제번호 | class | level|language|
+|--- | :---: | :--- :| --- :|
+|2609 | class2 | silver5 | python
 
 ⚡[문제링크](https://www.acmicpc.net/problem/2609)
 
@@ -139,9 +160,15 @@ print(int(lcd(a, b)))
 </div>
 </details>
 
+---
+
+# 요세푸스 문제 0
+
+| 문제번호 | class | level|language|
+|--- | :---: | :--- :| --- :|
+|11866 | class2 | silver4 | python
 
 
-# 요세푸스 문제 0(Class 2/Silver4)
 
 ⚡[문제링크](https://www.acmicpc.net/problem/11866)
 
@@ -165,9 +192,13 @@ print('<'+', '.join(answer)+'>')
 </div>
 </details>
 
+---
 
+# 스택
 
-# 스택(Class 2/Silver4)
+| 문제번호 | class | level|language|
+|--- | :---: | :--- :| --- :|
+|10828 | class2 | silver4 | python
 
 ⚡[문제링크](https://www.acmicpc.net/problem/10828)
 
@@ -212,9 +243,16 @@ for i in range(n):
 </div>
 </details>
 
+---
+
+# 프린터 큐
 
 
-# 프린터 큐(Class 2/Silver3)
+| 문제번호 | class | level|language|
+|--- | :---: | :--- :| --- :|
+|1966 | class2 | silver3 | python
+
+
 
 ⚡[문제링크](https://www.acmicpc.net/problem/1966)
 
@@ -245,6 +283,70 @@ for i in range(t):
                 break
 
     print(order)
+```
+
+</div>
+</details>
+
+---
+
+# 괄호
+
+
+| 문제번호 | class | level|language|
+|--- | :---: | :--- :| --- :|
+|9012 | class2 | silver4 | python
+
+⚡[문제링크](https://www.acmicpc.net/problem/9012)
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
+```python
+### 내가 푼 방식
+test = int(input())
+for te in range(test):
+    ps = input()
+    stack = []
+    for i in ps:
+        # print(stack)
+        if i == '(':
+            stack.append(i)
+        else:
+            if stack:
+                t = stack.pop()
+                if t == '(' :
+                    continue
+                else:
+                    stack.append(i)
+            else:
+                stack.append(i)
+                break
+
+    if not stack:
+        print("YES")
+    else:
+        print("NO")
+
+### 이런 방식도 있드라...! 이게 효율성이 더 높다
+from sys import stdin
+
+n = int(input())
+for _ in range(n):
+    str_ = stdin.readline().strip()
+    stack = 0
+    for chr_ in str_:
+        if chr_ == '(':
+            stack += 1
+        else:
+            stack -= 1
+            if stack < 0:
+                break
+    if stack == 0:
+        print('YES')
+    else:
+        print('NO')
 ```
 
 </div>
