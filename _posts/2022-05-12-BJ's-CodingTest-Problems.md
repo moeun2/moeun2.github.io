@@ -3,7 +3,7 @@ title: BJ's CodingTest Problems
 tags: [CodingTest, BJ]
 style: fill
 color: info
-description: ⏰ last update 2022/05/18 <br/> I'm solving the 2+ coding problems of  "solved.ac" and summarizing. 
+description: ⏰ last update 2022/05/20 <br/> I'm solving the 2+ coding problems of  "solved.ac" and summarizing. 
 ---
 
 {% capture list_items %}
@@ -14,6 +14,8 @@ description: ⏰ last update 2022/05/18 <br/> I'm solving the 2+ coding problems
 요세푸스 문제 0
 스택
 프린터 큐
+괄호
+부녀회장이 될테야
 {% endcapture %}
 {% include elements/list.html title="Table of Contents" type="toc" %}
 
@@ -21,9 +23,9 @@ description: ⏰ last update 2022/05/18 <br/> I'm solving the 2+ coding problems
 # 제로
 
 
-| 문제번호 | class | level|language|
-|--- | :---: | :--- :| --- :|
-|10773 | class2 | silver4 | python|
+| 문제번호  | class  | level   | language |
+| ----- | :----: | ------- | -------- |
+| 10773 | class2 | silver4 | python   |
 
 ⚡[문제링크](https://www.acmicpc.net/problem/10773)
 
@@ -347,6 +349,36 @@ for _ in range(n):
         print('YES')
     else:
         print('NO')
+```
+
+</div>
+</details>
+
+
+
+# 부녀회장이 될테야
+
+| 문제번호 | class | level|language|
+|--- | :---: | :--- :| --- :|
+|2775 | class2 | Bronze1 | python
+
+⚡[문제링크](https://www.acmicpc.net/problem/2775)
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
+```python
+Test = int(input())
+for test in range(Test):
+    k = int(input())
+    n = int(input())
+    list_zero = [x for x in range(1, 15)]
+    for i in range(k):
+        list_k = [sum(list_zero[:x]) for x in range(1, 15)]
+        list_zero = list_k
+    print(list_k[n-1])
+    # print(list_k)
 ```
 
 </div>
