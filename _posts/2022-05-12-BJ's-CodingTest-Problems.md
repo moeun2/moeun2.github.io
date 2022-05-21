@@ -3,7 +3,7 @@ title: BJ's CodingTest Problems
 tags: [CodingTest, BJ]
 style: fill
 color: info
-description: ⏰ last update 2022/05/20 <br/> I'm solving the 2+ coding problems of  "solved.ac" and summarizing. 
+description: ⏰ last update 2022/05/21 <br/> I'm solving the 2+ coding problems of  "solved.ac" and summarizing. 
 ---
 
 {% capture list_items %}
@@ -16,6 +16,7 @@ description: ⏰ last update 2022/05/20 <br/> I'm solving the 2+ coding problems
 프린터 큐
 괄호
 부녀회장이 될테야
+덱
 {% endcapture %}
 {% include elements/list.html title="Table of Contents" type="toc" %}
 
@@ -379,6 +380,64 @@ for test in range(Test):
         list_zero = list_k
     print(list_k[n-1])
     # print(list_k)
+```
+
+</div>
+</details>
+
+# 덱
+
+| 문제번호 | class | level|language|
+|--- | :---: | :--- :| --- :|
+|10866 | class2 | Silver4 | python
+
+⚡[문제링크](https://www.acmicpc.net/problem/10866)
+
+⚡[deque?](https://docs.python.org/ko/3/library/collections.html#collections.deque)
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
+```python
+from collections import deque
+import sys
+input = sys.stdin.readline
+d = deque()
+n = int(input())
+for i in range(n):
+    deq = input().split()
+    if deq[0] == 'push_front':
+        d.appendleft(deq[1])
+    elif deq[0] == 'push_back':
+        d.append(deq[1])
+    elif deq[0] == 'pop_front':
+        if not d:
+            print(-1)
+        else:
+            print(d.popleft())
+    elif deq[0] == 'pop_back':
+        if not d:
+            print(-1)
+        else:
+            print(d.pop())
+    elif deq[0] == 'size':
+        print(len(d))
+    elif deq[0] == "empty":
+        if not d:
+            print(1)
+        else:
+            print(0)
+    elif deq[0] == 'front':
+        if not d:
+            print(-1)
+        else:
+            print(d[0])
+    elif deq[0] == 'back':
+        if not d:
+            print(-1)
+        else:
+            print(d[-1])
 ```
 
 </div>
