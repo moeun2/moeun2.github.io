@@ -94,8 +94,8 @@ while True :
 ```
 
 </div>
+
 </details>
----
 
 # 이항 계수 1
 
@@ -438,6 +438,32 @@ for i in range(n):
             print(-1)
         else:
             print(d[-1])
+```
+
+</div>
+</details>
+
+
+
+# 좌표 정렬하기
+
+| 문제번호 | class | level|language|
+|--- | :---: | :--- :| --- :|
+|11650 | class2 | Silver5| python
+
+⚡[문제링크](https://www.acmicpc.net/problem/11650)
+
+⚡python은 최대한 한 줄에 코드를 작성하자! 한줄씩 읽기 때문에 길게쓰면 쓸수록 시간이 걸린다!
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
+```python
+n = int(input())
+list_N = [list(map(int, input().split())) for _ in range(n)]
+for x in sorted(list_N, key=lambda x: (x[0], x[1])):
+    print(x[0], x[1])
 ```
 
 </div>
