@@ -387,9 +387,9 @@ for test in range(Test):
 
 # 덱
 
-| 문제번호 | class | level|language|
-|--- | :---: | :--- :| --- :|
-|10866 | class2 | Silver4 | python
+| 문제번호  | class  |  level  | language |   solved   |
+| :---: | :----: | :-----: | :------: | :--------: |
+| 10866 | class2 | Silver4 |  python  | 2022-05-21 |
 
 ⚡[문제링크](https://www.acmicpc.net/problem/10866)
 
@@ -447,9 +447,9 @@ for i in range(n):
 
 # 좌표 정렬하기
 
-| 문제번호 | class | level|language|
-|--- | :---: | :--- :| --- :|
-|11650 | class2 | Silver5| python
+| 문제번호  | class  |  level  | language |   solved   |
+| :---: | :----: | :-----: | :------: | :--------: |
+| 11650 | class2 | Silver5 |  python  | 2022-05-21 |
 
 ⚡[문제링크](https://www.acmicpc.net/problem/11650)
 
