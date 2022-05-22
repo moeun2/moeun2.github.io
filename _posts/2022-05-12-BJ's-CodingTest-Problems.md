@@ -469,3 +469,29 @@ for x in sorted(list_N, key=lambda x: (x[0], x[1])):
 
 </div>
 </details>
+
+
+
+# 달팽이는 올라가고 싶다
+
+| 문제번호 | class  |  level  | language |   solved   |
+| :--: | :----: | :-----: | :------: | :--------: |
+| 2869 | class2 | Bronze1 |  python  | 2022-05-22 |
+
+⚡[문제링크](https://www.acmicpc.net/problem/2869)
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
+```python
+import math
+a,b,v = map(int,input().split())
+x = (v-b) / (a-b)
+x = math.ceil(x)
+
+print(int(x))
+```
+
+</div>
+</details>
