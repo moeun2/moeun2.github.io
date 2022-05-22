@@ -3,7 +3,7 @@ title: BJ's CodingTest Problems
 tags: [CodingTest, BJ]
 style: fill
 color: info
-description: ⏰ last update 2022/05/21 <br/> I'm solving the 2+ coding problems of  "solved.ac" and summarizing. 
+description: ⏰ last update 2022/05/22 <br/> I'm solving the 2+ coding problems of  "solved.ac" and summarizing. 
 ---
 
 {% capture list_items %}
@@ -17,6 +17,7 @@ description: ⏰ last update 2022/05/21 <br/> I'm solving the 2+ coding problems
 괄호
 부녀회장이 될테야
 덱
+달팽이는 올라가고 싶다
 {% endcapture %}
 {% include elements/list.html title="Table of Contents" type="toc" %}
 
