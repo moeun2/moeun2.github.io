@@ -3,7 +3,7 @@ title: BJ's CodingTest Problems
 tags: [CodingTest, BJ]
 style: fill
 color: info
-description: ⏰ last update 2022/05/22 <br/> I'm solving the 2+ coding problems of  "solved.ac" and summarizing. 
+description: ⏰ last update 2022/05/24 <br/> I'm solving the 2+ coding problems of  "solved.ac" and summarizing. 
 ---
 
 {% capture list_items %}
@@ -18,6 +18,7 @@ description: ⏰ last update 2022/05/22 <br/> I'm solving the 2+ coding problems
 부녀회장이 될테야
 덱
 달팽이는 올라가고 싶다
+덩치
 {% endcapture %}
 {% include elements/list.html title="Table of Contents" type="toc" %}
 
@@ -491,6 +492,36 @@ x = (v-b) / (a-b)
 x = math.ceil(x)
 
 print(int(x))
+```
+
+</div>
+</details>
+
+# 덩치
+
+| 문제번호 | class  |  level  | language |   solved   |
+| :--: | :----: | :-----: | :------: | :--------: |
+| 7568 | class2 | Silver5 |  python  | 2022-05-24 |
+
+⚡[문제링크](https://www.acmicpc.net/problem/7568)
+
+⚡2개의 조건으로 정렬해서 푼다면, 앞에 있다고 해도 뒤에 있는 항목이 앞에 있는 모든 항목보다 작다고 장담할 수 없음. 브루트포스로 풀었음.
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
+```python
+n = int(input())
+person = [list(map(int,input().split())) for i in range(n)]
+result = ''
+for i in range(n):
+    cnt = 1
+    for j in range(n):
+        if(person[j][0]>person[i][0] and person[j][1]>person[i][1]):
+            cnt += 1
+    result += ' ' + str(cnt)
+print(result.strip())
 ```
 
 </div>
