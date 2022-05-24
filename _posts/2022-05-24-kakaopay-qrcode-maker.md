@@ -11,8 +11,10 @@ Process
 1. QRCode Decode
 2. QRCode Analyze
 3. QRCode Generate 
-{% endcapture %}
-{% include elements/list.html title="Table of Contents" type="toc" %}
+  View All Code
+  Reference
+  {% endcapture %}
+  {% include elements/list.html title="Table of Contents" type="toc" %}
 
 # Process
 
@@ -109,6 +111,11 @@ QR 코드를 생성할 수 있다. 주피터 노트북을 통해 실행해보면
 ![image](https://user-images.githubusercontent.com/40678696/169953902-92209d1a-71b7-4dd1-a295-07cd8fb0b5f0.png)
 
 스캔해보면 다음과 같이 5만원을 송금할 수 있는 코드가 생성되었음을 확인할 수 있다.
+
+# View All Code
+
+{% gist 32da2b48d3cc77a73004cba51e2dc3c3 %}
+
 
 # Reference
 
