@@ -6,14 +6,7 @@ color: info
 description: ⏰ last update 2022/05/13 <br/> I'm solving coding problems of "Programmers" and summarizing. 
 ---
 
-{% capture list_items %}
-Hash
-Stack / Queue
-Greedy
-Brute-Force
-DFS/BFS
-{% endcapture %}
-{% include elements/list.html title="Table of Contents" type="toc" %}
+
 
 
 

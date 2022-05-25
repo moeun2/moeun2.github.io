@@ -6,15 +6,7 @@ color: primary
 description: ⏰ last update 2022/05/24 <br/> How to decode and generate KakaoTalk QR code
 ---
 
-{% capture list_items %}
-Process
-1. QRCode Decode
-2. QRCode Analyze
-3. QRCode Generate 
-  View All Code
-  Reference
-  {% endcapture %}
-  {% include elements/list.html title="Table of Contents" type="toc" %}
+
 
 # Process
 

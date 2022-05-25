@@ -6,10 +6,7 @@ color:
 description: ⏰ last update 2022/05/14 <br/> I studied the algorithms and summarized them.
 ---
 
-{% capture list_items %}
-유클리드 알고리즘(Euclidean Algorithm)
-{% endcapture %}
-{% include elements/list.html title="Table of Contents" type="toc" %}
+
 
 # 유클리드 알고리즘(Euclidean Algorithm)
 

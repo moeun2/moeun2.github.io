@@ -6,21 +6,7 @@ color: info
 description: ⏰ last update 2022/05/24 <br/> I'm solving the 2+ coding problems of  "solved.ac" and summarizing. 
 ---
 
-{% capture list_items %}
-제로
-균형잡힌 세상
-이항 계수 1
-최대공약수와 최소공배수
-요세푸스 문제 0
-스택
-프린터 큐
-괄호
-부녀회장이 될테야
-덱
-달팽이는 올라가고 싶다
-덩치
-{% endcapture %}
-{% include elements/list.html title="Table of Contents" type="toc" %}
+
 
 
 # 제로
