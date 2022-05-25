@@ -25,7 +25,7 @@ source : [jekyll-toc](https://github.com/allejo/jekyll-toc)
 
 2. `_includes` 폴더에 다운로드 받은 toc.html 파일을 넣는다.
 
-3. `_layouts/post.html`안의 `{{content}}` 위에 `{% include toc.html html=content %}`을 붙혀넣는다.
+3. `_layouts/post.html`안의 ![image](https://user-images.githubusercontent.com/40678696/170320135-1b5a064b-77a1-4b9a-bf93-4401559fd2f7.png) 위에 ![image](https://user-images.githubusercontent.com/40678696/170319811-8a25b439-d620-440f-bb51-06031c014e02.png)을 적는다.
 
    {% include elements/figure.html image="https://user-images.githubusercontent.com/40678696/170311539-bff1a1df-7283-4442-8269-138db2f238c6.png" caption="_layouts/post.html 적용 전" %}
 
