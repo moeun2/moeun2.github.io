@@ -1,5 +1,5 @@
 ---
-title: BJ's CodingTest Problems
+2title: BJ's CodingTest Problems
 tags: [CodingTest, BJ]
 style: fill
 color: info
@@ -508,6 +508,30 @@ for i in range(n):
             cnt += 1
     result += ' ' + str(cnt)
 print(result.strip())
+```
+
+</div>
+</details>
+
+# ACM 호텔
+
+| 문제번호  | class  |  level  | language |   solved   |
+| :---: | :----: | :-----: | :------: | :--------: |
+| 10250 | class2 | Bronze3 |  python  | 2022-05-26 |
+
+⚡[문제링크](https://www.acmicpc.net/problem/10250)
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
+```python
+import math
+for _ in range(int(input())):
+    h, w, n = map(int, input().split())
+    x = math.ceil(n / h)
+    y = n - h * (x - 1)
+    print('%d%02d' % (y, x))
 ```
 
 </div>
