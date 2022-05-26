@@ -26,13 +26,12 @@ layout: page
   {% endfor %} {%- endif -%}
 </p>
 
-<article>
-  <div class="list-group my-3">
-    <a class="list-group-item active disabled text-white">Table of Contents</a>
-    {% include toc.html html=content %}
-  </div>
-  {{ content }}
-</article>
+<div class="list-group my-3">
+  <a class="list-group-item active disabled text-white">Table of Contents</a>
+  {% include toc.html html=content %}
+</div>
+{{ content }}
+
 <hr />
 <script
   src="https://utteranc.es/client.js"
