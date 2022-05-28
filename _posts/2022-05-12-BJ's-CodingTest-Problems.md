@@ -1,9 +1,9 @@
 ---
-2title: BJ's CodingTest Problems
+2title: Class2_BJ's CodingTest Problems[Done]
 tags: [CodingTest, BJ]
 style: fill
 color: info
-description: ⏰ last update 2022/05/26 <br/> I'm solving the 2+ coding problems of  "solved.ac" and summarizing. 
+description: ⏰ last update 2022/05/28 <br/> I'm solving the Class2 coding problems of  "solved.ac" and summarizing. 
 ---
 
 
@@ -532,6 +532,62 @@ for _ in range(int(input())):
     x = math.ceil(n / h)
     y = n - h * (x - 1)
     print('%d%02d' % (y, x))
+```
+
+</div>
+</details>
+
+
+
+# 큐
+
+| 문제번호  | class  |  level  | language |   solved   |
+| :---: | :----: | :-----: | :------: | :--------: |
+| 10845 | class2 | Silver4 |  python  | 2022-05-28 |
+
+⚡[문제링크](https://www.acmicpc.net/problem/10845)
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
+```python
+from collections import deque
+import sys
+
+input = sys.stdin.readline
+n = int(input().strip())
+queue = deque()
+for _ in range(n):
+    command = input().split()
+    if command[0] == 'push':
+        queue.append(command[1])
+    elif command[0] == 'pop':
+        if queue:
+            print(queue.popleft())
+        else:
+            print(-1)
+    elif command[0] == 'size':
+        print(len(queue))
+    elif command[0] == 'empty':
+        if queue:
+            print(0)
+        else:
+            print(1)
+    elif command[0] == 'front':
+        if queue:
+            front = queue.popleft()
+            print(front)
+            queue.appendleft(front)
+        else:
+            print(-1)
+    elif command[0] == 'back':
+        if queue:
+            back = queue.pop()
+            print(back)
+            queue.append(back)
+        else:
+            print(-1)
 ```
 
 </div>
