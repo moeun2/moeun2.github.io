@@ -3,7 +3,7 @@ title: 카카오톡 QR코드로 송금가능한 QR코드 만들기
 tags: [HowTo]
 style: border
 color: primary
-description: ⏰ last update 2022/05/24 <br/> How to decode and generate KakaoTalk QR code
+description: How to decode and generate KakaoTalk QR code
 ---
 
 

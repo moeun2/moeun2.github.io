@@ -3,7 +3,7 @@ title: DataStructure
 tags: [CS, DataStructure]
 style: fill
 color: warning
-description: ⏰ last update 2022/05/25 <br/> 
+description: DataStructure Summarizing
 ---
 
 

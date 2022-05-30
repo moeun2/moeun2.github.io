@@ -3,7 +3,7 @@ title: Algorithm
 tags: [Algorithm]
 style: 
 color: 
-description: ⏰ last update 2022/05/14 <br/> I studied the algorithms and summarized them.
+description: I studied the algorithms and summarized them.
 ---
 
 

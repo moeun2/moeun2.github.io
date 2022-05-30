@@ -3,7 +3,7 @@
 tags: [CodingTest, BJ]
 style: fill
 color: info
-description: ⏰ last update 2022/05/28 <br/> I'm solving the Class2 coding problems of  "solved.ac" and summarizing. 
+description: I'm solving the Class2 coding problems of  "solved.ac" and summarizing. 
 ---
 
 

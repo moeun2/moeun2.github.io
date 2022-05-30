@@ -3,7 +3,7 @@ title: Programmers's CodingTest Problems
 tags: [CodingTest, Programmers]
 style: fill
 color: info
-description: ⏰ last update 2022/05/13 <br/> I'm solving coding problems of "Programmers" and summarizing. 
+description: I'm solving coding problems of "Programmers" and summarizing. 
 ---
 
 

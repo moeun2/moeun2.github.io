@@ -3,7 +3,7 @@ title: Jekyll 블로그 목차 만들기
 tags: [Jekyll]
 style: border
 color: primary
-description: ⏰ last update 2022/05/26 <br/> 
+description: How to create Jekyll blog TOC
 ---
 
 source : [jekyll-toc](https://github.com/allejo/jekyll-toc)
