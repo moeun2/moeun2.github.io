@@ -39,7 +39,7 @@ end
 
    ```
 
-{% endraw %}
+
 ## Usage
 
 
@@ -59,6 +59,8 @@ end
 ```
 {{ page.last_modified_at | date: '%Y:%B:%A:%d:%S:%R' }}
 ```
+
+{% endraw %}
 5. 내가 사용한 방법
 
   나는 post file의 페이지 안이 아니라 post file을 모아서 볼 수 있는 카드 레이아웃에서 나오길 바랬다. 그래서 원하는 레이아웃 안에다가 아래의 이미지 대로 넣어줬다. 
