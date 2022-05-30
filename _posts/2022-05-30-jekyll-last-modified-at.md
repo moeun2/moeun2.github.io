@@ -1,8 +1,8 @@
 ---
 title: jekyll 깃허브 블로그에 파일의 마지막 수정 날짜 자동으로 넣는 방법
 tags: [Jekyll]
-style: 
-color: 
+style: border
+color: primary
 description: How to automatically put the last_modified_at in the jekyll GitHub blog
 ---
 
