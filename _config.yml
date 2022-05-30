@@ -14,6 +14,11 @@ plugins:
   - jemoji
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-last-modified-at
+
+### LastModifedAt Setting : Optional. The default date format, used if none is specified in the tag.
+last-modified-at:
+    date-format: '%d %b %Y'
 
 ### Navbar Settings ###
 nav_exclude: # The following paths are excluded from navbar
