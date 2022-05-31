@@ -1,4 +1,4 @@
-cd C:\Ruby31-x64\bin
+cd C:\Ruby30-x64\bin
 call setrbvars.cmd
-cd C:\Users\multicampus\Desktop\moeun2.github.io\moeun2.github.io
+cd C:\Users\mo_ah\Desktop\blog\moeun2.github.io
 bundle exec jekyll serve
