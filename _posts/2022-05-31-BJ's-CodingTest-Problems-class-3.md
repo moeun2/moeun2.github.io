@@ -6,7 +6,6 @@ color: info
 description: I'm solving the Class3 coding problems of  "solved.ac" and summarizing.
 ---
 
-{% last_modified_at %}
 {{ page.last_modified_at | date: '%Y:%B:%A:%d:%S:%R' }}
 
 # 제로

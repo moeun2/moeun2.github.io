@@ -2,7 +2,7 @@
 title: moeun2
 description: >-
   Fais de ta vie un rêve,<br>
-  et d'un rêve, une réalité.🌹 
+  et d'un rêve, une réalité.🌹
 baseurl: "" # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository: moeun2/moeun2.github.io # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme: YoussefRaafatNasry/portfolYOU
@@ -18,7 +18,7 @@ plugins:
 
 ### LastModifedAt Setting : Optional. The default date format, used if none is specified in the tag.
 last-modified-at:
-    date-format: '%d %b %Y'
+  date-format: "%d %b %Y"
 
 ### Navbar Settings ###
 nav_exclude: # The following paths are excluded from navbar
@@ -64,7 +64,7 @@ collections:
 
 ### Disqus ###
 disqus:
-  shortname:  # Your website Shortname on disqus
+  shortname: # Your website Shortname on disqus
 
 ### Analytics ###
 analytics:
@@ -85,13 +85,9 @@ defaults:
     values:
       comments: true # Set to true to enable disqus comments
 
-
-
 ### Exclude from processing ###
 exclude:
   - README.md
   - CONTRIBUTING.md
   - LICENSE
   - "*.log"
-
-
