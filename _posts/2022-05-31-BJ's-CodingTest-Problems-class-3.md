@@ -1,12 +1,11 @@
 ---
-2title: Class3_BJ's CodingTest Problems
+title: Class3_BJ's CodingTest Problems
 tags: [CodingTest, BJ]
 style: fill
 color: info
 description: I'm solving the Class3 coding problems of  "solved.ac" and summarizing.
+last_modified_at : 2022-06-01
 ---
-
-{{ page.last_modified_at | date: '%Y:%B:%A:%d:%S:%R' }}
 
 # 제로
 
@@ -41,3 +40,23 @@ else:
 </details>
 
 ---
+
+# 동전 0
+
+| 문제번호 | class  | level   | language |
+| -------- | :----: | ------- | -------- |
+| 11047    | class3 | silver3 | python   |
+
+⚡[문제링크](https://www.acmicpc.net/problem/11047)
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
+
+```python
+
+```
+
+</div>
+</details>

@@ -2,30 +2,48 @@
 layout: page
 ---
 
+<script>
+  window.addEventListener("load", function () {
+    if (document.getElementById("last-modified")) {
+      fetch("https://api.github.com/repos/moeun2/moeun2.github.io/commits?path={{ page.path }}")
+        .then((response) => {
+          return response.json();
+        })
+        .then((commits) => {
+          var modified = commits[0]["commit"]["committer"]["date"].slice(0, 10);
+
+          return modified;
+        })
+        .then((modified) => {
+          var date = modified.split("-");
+          var year = date[0];
+
+          var month = console.log(date[0]);
+          document.getElementById("last-modified").textContent = "last_modified_at : " + modified;
+        });
+    }
+  });
+</script>
+
 <h1><b>{{ page.title }}</b></h1>
 
 <p class="post-metadata text-muted">
-  {{ page.date | date_to_long_string }} -  
+  <span class="post-metadata text-muted" id="last-modified"></span>
+  <br />
+  created_at : {{ page.date | date_to_long_string }} -
   <b>
-  {%- assign words = content | number_of_words -%}
-  {%- if words < 360 -%}
-    less than 1 min read time
-  {%- else -%}
-    {{ words | divided_by: 180 }} mins read time
-  {%- endif -%}
+    {%- assign words = content | number_of_words -%} {%- if words < 360 -%} less than 1 min read
+    time {%- else -%} {{ words | divided_by: 180 }} mins read time {%- endif -%}
   </b>
-
-  <br>
-
-  {%- if page.tags != empty -%}
-    Tags: 
-    {% for tag in page.tags %}
-    <a class="text-decoration-none no-underline" href="{{ tag | slugify | prepend:'/blog/tags#' | relative_url }}">
-      <span class="tag badge badge-pill text-primary border border-primary">{{ tag }}</span>
-    </a>
-    {% endfor %}
-  {%- endif -%}
-
+  <br />
+  {%- if page.tags != empty -%} Tags: {% for tag in page.tags %}
+  <a
+    class="text-decoration-none no-underline"
+    href="{{ tag | slugify | prepend:'/blog/tags#' | relative_url }}"
+  >
+    <span class="tag badge badge-pill text-primary border border-primary">{{ tag }}</span>
+  </a>
+  {% endfor %} {%- endif -%}
 </p>
 
 <div class="list-group my-3">
@@ -35,7 +53,9 @@ layout: page
 {{ content }}
 
 <hr />
-<p style="text-align: center; color:#6c757d; font-size: 90%;">💙You need to log in to GitHub to write comments.💙</p>
+<p style="text-align: center; color: #6c757d; font-size: 90%">
+  💙You need to log in to GitHub to write comments.💙
+</p>
 <script
   src="https://utteranc.es/client.js"
   repo="moeun2/moeun2.github.io"
