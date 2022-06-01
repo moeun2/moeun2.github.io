@@ -55,7 +55,19 @@ else:
 
 
 ```python
+from itertools import combinations
 
+n, k = map(int, input().split())
+coins = [int(input()) for _ in range(n)]
+coins = sorted(list(filter(lambda x: x <= k, coins)), reverse=True)
+# print(coins)
+answer = 0
+
+for i in coins:
+    answer += k // i
+    k %= i
+
+print(answer)
 ```
 
 </div>
