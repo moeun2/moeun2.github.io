@@ -4,7 +4,7 @@ tags: [CodingTest, BJ]
 style: fill
 color: info
 description: I'm solving the Class3 coding problems of  "solved.ac" and summarizing.
-last_modified_at : 2022-06-01
+last_modified_at: 02 June 2022
 ---
 
 # 제로
@@ -52,7 +52,6 @@ else:
 <details>
 <summary>View Code...</summary>
 <div markdown="1">
-
 
 ```python
 from itertools import combinations
