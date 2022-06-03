@@ -7,6 +7,8 @@ description: this is the example of the post file
 last_modified_at: 02 June 2022
 ---
 
+source : [gyoogle](https://github.com/gyoogle/tech-interview-for-developer/blob/master/Interview/Interview%20List.md#%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC)
+
 # Q1. OSI 7계층을 설명하시오
 
 <details>
@@ -30,4 +32,13 @@ last_modified_at: 02 June 2022
 
 </div>
 </details>
-### HTTP 메소드에 대해서 설명하세요.
+
+# Q2. TCP/IP 프로토콜을 스택 4계층으로 짓고 설명하시오
+
+- LINK 계층
+
+- IP 계층
+
+- TCP/UDP (전송) 계층
+
+- 애플리케이션 계층
