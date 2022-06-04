@@ -14,8 +14,8 @@
       {% include navbar.html %}
       <div class="page__content">{{ content }}</div>
     </main>
-    {% include footer.html %} {% include analytics.html %} {% include
-    scripts.html %} {%- if site.buymeacoffee.enabled == true -%}
+    {% include footer.html %} {% include analytics.html %} {% include scripts.html %} {%- if
+    site.buymeacoffee.enabled == true -%}
     <script
       data-name="BMC-Widget"
       data-cfasync="false"
@@ -69,6 +69,7 @@
         // simpleNotice.show('URL을 클립보드에 복사하였습니다.');
         const Toast = Swal.mixin({
           toast: true,
+          iconColor: "#007bff",
           position: "top-end",
           showConfirmButton: false,
           timer: 1500,

@@ -4,7 +4,7 @@ tags: [CodingTest, BJ]
 style: fill
 color: info
 description: I'm solving the Class3 coding problems of  "solved.ac" and summarizing.
-last_modified_at: 02 June 2022
+last_modified_at: 04 June 2022
 ---
 
 # 제로
@@ -78,14 +78,15 @@ print(answer)
 | 11724    | class3 | silver2 | python   |
 
 ⚡[문제링크](https://www.acmicpc.net/problem/11724)
+
 <details>
 <summary>알아야 할 것</summary>
 <div markdown="1">
 1. 방향 없는 그래프
 
-   양방향 그래프라는 말이다.
+양방향 그래프라는 말이다.
 
-   u -> v / v->u
+u -> v / v->u
 
 2. 간선 정보가 없는 노드도 연결 요소로 포함한다.
 
@@ -106,7 +107,6 @@ print(answer)
 <details>
 <summary>View Code...</summary>
 <div markdown="1">
-
 
 ```python
 import sys
