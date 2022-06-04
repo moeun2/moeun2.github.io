@@ -73,3 +73,40 @@ end
 
 나는 post file의 페이지 안이 아니라 post file을 모아서 볼 수 있는 카드 레이아웃에서 나오길 바랬다. 그래서 원하는 레이아웃 안에다가 아래의 이미지 대로 넣어줬다.
 {% include elements/figure.html image="https://user-images.githubusercontent.com/40678696/171019435-54f6b6dd-3246-4ec8-936b-1bba8564faec.png" caption="원하는 레이아웃 안에 넣어준 모습" %}
+
+# Plugin이 Github Deploy시 적용 안되는 오류
+
+해당 플러그인이 깃허브에 배포를 하니, 실행이 되지 않았다. 찾아보니, 깃허브에서 지원하는 플러그인이 아니라 적용되지 않는다고 한다. 그럼에도 불구하고 last_modified_at을 넣고 싶어서 방법을 찾았다.
+
+```html
+<script>
+  window.addEventListener("load", function () {
+    if (document.getElementById("last-modified")) {
+      fetch("https://api.github.com/repos/moeun2/moeun2.github.io/commits?path={{ page.path }}")
+        .then((response) => {
+          return response.json();
+        })
+        .then((commits) => {
+          var modified = commits[0]["commit"]["committer"]["date"].slice(0, 10);
+
+          return modified;
+        })
+        .then((modified) => {
+          var date = modified.split("-");
+          var year = date[0];
+
+          var month = console.log(date[0]);
+          document.getElementById("last-modified").textContent = "last_modified_at : " + modified;
+        });
+    }
+  });
+</script>
+
+---
+
+<span class="post-metadata text-muted" id="last-modified"></span>
+```
+
+해당 Javascript코드는 Github API를 이용하여 해당 포스트의 깃허브 커밋내역을 가져와서 마지막 수정일을 가져온다.
+
+{% include elements/figure.html image="https://user-images.githubusercontent.com/40678696/171996761-bfc4fac8-1aa6-4502-9163-44059d1dbf03.png" caption="적용 후 post file 모습" %}
