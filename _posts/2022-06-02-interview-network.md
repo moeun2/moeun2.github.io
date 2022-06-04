@@ -30,3 +30,4 @@ last_modified_at: 02 June 2022
 
 </div>
 </details>
+### HTTP 메소드에 대해서 설명하세요.
