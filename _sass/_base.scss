@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'NanumSquare',"Poppins", sans-serif;
 }
 
 .badge {
@@ -24,4 +24,9 @@ body {
   * {
     color: $text-white !important;
   }
+}
+@font-face {
+  font-family: 'NanumSquare';
+  src: url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+  unicode-range: U+AC00-D7A3;
 }
