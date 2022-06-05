@@ -4,7 +4,7 @@ tags: [CodingTest, BJ]
 style: fill
 color: info
 description: I'm solving the Class3 coding problems of  "solved.ac" and summarizing.
-last_modified_at: 04 June 2022
+last_modified_at: 05 June 2022
 ---
 
 # 제로
@@ -199,9 +199,83 @@ ans.add(find_parent(parent, i))
 
 print(len(ans))
 
-```
+````
 
 
 </div>
 </details>
+
+
+---
+
+# 최소힙
+
+| 문제번호 | class  | level   | language |
+| -------- | :----: | ------- | -------- |
+| 1927    | class3 | silver2 | python   |
+
+⚡[문제링크](https://www.acmicpc.net/problem/1927)
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
+```python
+import heapq
+import sys
+
+input = sys.stdin.readline
+n = int(input())
+hq = []
+for _ in range(n):
+    temp = int(input())
+    if temp == 0:
+        if hq:
+            print(heapq.heappop(hq))
+        else:
+            print(0)
+    else:
+        heapq.heappush(hq, temp)
+````
+
+</div>
+</details>
+
+---
+
+# 최대힙
+
+| 문제번호 | class  | level   | language |
+| -------- | :----: | ------- | -------- |
+| 11279    | class3 | silver2 | python   |
+
+⚡[문제링크](https://www.acmicpc.net/problem/11279)
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
+```python
+import heapq
+import sys
+
+input = sys.stdin.readline
+n = int(input())
+hq = []
+for _ in range(n):
+    temp = int(input())
+    if temp == 0:
+        if hq:
+            print(heapq.heappop(hq)[1])
+        else:
+            print(0)
+    else:
+        heapq.heappush(hq, (-temp,temp))
+
+
 ```
+
+</div>
+</details>
+
+---
