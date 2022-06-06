@@ -3,7 +3,8 @@ title: Programmers's CodingTest Problems
 tags: [CodingTest, Programmers]
 style: fill
 color: info
-description: I'm solving coding problems of "Programmers" and summarizing. 
+description: I'm solving coding problems of "Programmers" and summarizing.
+last_modified_at: 06 June 2022
 ---
 
 
@@ -76,6 +77,24 @@ def solution(clothes):
 <div markdown="1">
 
 ```python
+def solution(genres, plays):
+    answer = []
+    dict = {}
+    num_list = {}
+    for a,b in zip(genres, enumerate(plays)):
+        dict[a] = dict.get(a, [])+[b]
+        num_list[a] = num_list.get(a,0) + b[1]
+    num_list = sorted(list(num_list.items()), key=lambda x : x[1], reverse= True)
+
+    for key in num_list:
+        temp = dict[key[0]]
+        temp = sorted(temp, key=lambda x: (x[1],-x[0]), reverse = True)
+        answer+=temp[:2]
+
+    result = []
+    for a in answer:
+        result.append(a[0])
+    return result
 
 ```
 
@@ -128,7 +147,7 @@ def solution(progresses, speeds):
 <details>
 <summary>View Code...</summary>
 <div markdown="1">
-```python
+​```python
 def solution(priorities, location):
     answer = 0
     queue =  [(i,p) for i,p in enumerate(priorities)]
@@ -210,7 +229,7 @@ def solution(prices):
 <div markdown="1">
 ```python
 def solution(n, lost, reserve):
-    
+
     # 교집합 제거
     _reserve = list(set(reserve) - set(lost))
     _lost = list(set(lost) - set(reserve))
@@ -241,7 +260,7 @@ def solution(n, lost, reserve):
 <details>
 <summary>View Code...</summary>
 <div markdown="1">
-```python
+​```python
 def solution(name):
     answer = 0  
     name = "ABA"
@@ -301,7 +320,7 @@ def solution(answers):
     b = [2,1,2,3,2,4,2,5]
     c = [3,3,1,1,2,2,4,4,5,5]
     result = [0,0,0]
-    
+
     for i in range(len(answers)):
         if a[i%5] == answers[i]:
             result[0] += 1
@@ -313,8 +332,9 @@ def solution(answers):
     for idx, r in enumerate(result):
         if r == max(result):
             answer.append(idx+1)
-            
-    
+
+
+​    
     return answer
 ```
 </div>
@@ -326,7 +346,7 @@ def solution(answers):
 <details>
 <summary>View Code...</summary>
 <div markdown="1">
-```python
+​```python
 
 ```
 </div>
@@ -354,7 +374,7 @@ def solution(answers):
 <summary>View Code...</summary>
 <div markdown="1">
 
-```python
+​```python
 
 ```
 

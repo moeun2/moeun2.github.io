@@ -144,7 +144,7 @@ print(answer)
 <details>
 <summary>반례</summary>
 <div markdown="1">
- 
+
 ```python
 4 2
 1 4
@@ -164,7 +164,7 @@ print(answer)
 <details>
 <summary>참고하면 좋을 코드</summary>
 <div markdown="1">
- 
+
 ```python
 # @musemagic
 import sys
@@ -279,3 +279,35 @@ for _ in range(n):
 </details>
 
 ---
+
+# 듣보잡
+
+| 문제번호 | class  | level   | language |
+| -------- | :----: | ------- | -------- |
+| 1764     | class3 | silver4 | python   |
+
+⚡[문제링크](https://www.acmicpc.net/problem/1764)
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
+
+```python
+import sys
+
+input = sys.stdin.readline
+
+n, m = map(int, input().split())
+n_people = [input().strip() for _ in range(n)]
+m_people = [input().strip() for _ in range(m)]
+nm_people = list(set(n_people) & set(m_people))
+nm_people.sort()
+print(len(nm_people))
+for i in nm_people:
+    print(i)
+
+```
+
+</div>
+</details>
