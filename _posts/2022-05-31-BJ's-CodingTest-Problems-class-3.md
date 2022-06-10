@@ -4,7 +4,7 @@ tags: [CodingTest, BJ]
 style: fill
 color: info
 description: I'm solving the Class3 coding problems of  "solved.ac" and summarizing.
-last_modified_at: 05 June 2022
+last_modified_at: 10 June 2022
 ---
 
 # 제로
@@ -291,6 +291,41 @@ for _ in range(n):
 <details>
 <summary>View Code...</summary>
 <div markdown="1">
+
+
+```python
+import sys
+
+input = sys.stdin.readline
+
+n, m = map(int, input().split())
+n_people = [input().strip() for _ in range(n)]
+m_people = [input().strip() for _ in range(m)]
+nm_people = list(set(n_people) & set(m_people))
+nm_people.sort()
+print(len(nm_people))
+for i in nm_people:
+    print(i)
+
+```
+
+</div>
+</details>
+
+---
+
+# Z
+
+| 문제번호 | class  | level   | language |
+| -------- | :----: | ------- | -------- |
+| 1074     | class3 | silver1 | python   |
+
+⚡[문제링크](https://www.acmicpc.net/problem/1074)
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
 
 
 ```python
