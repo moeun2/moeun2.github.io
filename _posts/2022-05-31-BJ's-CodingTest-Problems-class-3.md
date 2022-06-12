@@ -346,3 +346,54 @@ for i in nm_people:
 
 </div>
 </details>
+
+
+
+---
+
+# 색종이 만들기
+
+| 문제번호 | class  | level   | language |
+| -------- | :----: | ------- | -------- |
+| 2630     | class3 | silver2 | python   |
+
+⚡[문제링크](https://www.acmicpc.net/problem/1074)
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
+
+
+
+```python
+import sys
+
+N = int(sys.stdin.readline())
+paper = [list(map(int, sys.stdin.readline().split())) for _ in range(N)] 
+
+result = []
+
+def solution(x, y, N) :
+  color = paper[x][y]
+  for i in range(x, x+N) :
+    for j in range(y, y+N) :
+      if color != paper[i][j] :
+        solution(x, y, N//2)
+        solution(x, y+N//2, N//2)
+        solution(x+N//2, y, N//2)
+        solution(x+N//2, y+N//2, N//2)
+        return
+  if color == 0 :
+    result.append(0)
+  else :
+    result.append(1)
+
+
+solution(0,0,N)
+print(result.count(0))
+print(result.count(1))
+```
+
+</div>
+</details>
