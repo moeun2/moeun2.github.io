@@ -9,8 +9,7 @@ last_modified_at: 02 June 2022
 
 source : [gyoogle](https://github.com/gyoogle/tech-interview-for-developer/blob/master/Interview/Interview%20List.md#%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC)
 
-# Q1. OSI 7계층을 설명하시오
-
+# OSI 7계층?
 <details>
 <summary>View Answer...</summary>
 <div markdown="1">
@@ -33,7 +32,7 @@ source : [gyoogle](https://github.com/gyoogle/tech-interview-for-developer/blob/
 </div>
 </details>
 
-# Q2. TCP/IP 프로토콜을 스택 4계층으로 짓고 설명하시오
+# TCP/IP 프로토콜을 스택 4계층으로 짓고 설명하시오
 
 <details>
 <summary>View Answer...</summary>
@@ -49,7 +48,7 @@ source : [gyoogle](https://github.com/gyoogle/tech-interview-for-developer/blob/
 
 ---
 
-# Q3. TCP란?
+#  TCP란?
 
 > 서버와 클라이언트의 함수 호출 순서가 중요하다
 >
@@ -74,7 +73,7 @@ source : [gyoogle](https://github.com/gyoogle/tech-interview-for-developer/blob/
 
 
 
-# Q3. 3-way handshaking?
+# 3-way handshaking?
 
 TCP 소켓은 연결 설정과정 중에 총 3번의 대화를 주고 받는다.
 
@@ -90,3 +89,64 @@ TCP 소켓은 연결 설정과정 중에 총 3번의 대화를 주고 받는다.
 - 클라이언트의 ACK 메시지를 받은 서버는 소켓 연결을 close함
 - 클라이언트는 아직 서버로부터 받지 못한 데이터가 있을 것을 대비해서, 일정 시간동안 세션을 남겨놓고 잉여 패킷을 기다리는 과정을 거침 ( TIME_WAIT )
 
+
+
+# 주소창에 naver.com을 치면 일어나는 일
+
+## IP 주소
+
+- IP 주소란 많은 컴퓨터들이 인터넷 상에서 서로를 인식하기 위해 지정받은 식별용 번호라고 생각하면 된다.
+- 현재는 IPv4 버전(32비트)로 구성되어 있으며, 한번씩은 들어봤을 법한 127.0.0.1 같은 주소를 말한다.
+- 시간이 갈수록 IPv4 주소의 부족으로 IPv6가 생겼는데, 128비트로 구성되어 있기 때문에 IP 주소가 부족하지 않다는 특징이 있다.
+
+## 도메인 네임(Domain Name)
+
+- IP 주소는 12자리의 숫자로 되어 있기 때문에 사람이 외우기 힘들다는 단점이 있다.
+- 그렇기 때문에 12자리의 IP 주소를 문자로 표현한 주소를 **도메인 네임**이라고 한다.
+- 다시 말해서, 도메인 네임은 'naver.com'처럼 몇 개의 의미있는 문자들과 .의 조합으로 구성된다.
+- 도메인 네임은 사람의 편의성을 위해 만든 주소이므로 실제로는 컴퓨터가 이해할 수 있는 IP 주소로 변환하는 작업이 필요하다.
+- 이때, 사용할 수 있도록 미리 도메인 네임과 함께 해당하는 IP 주소값을 한 쌍으로 저장하고 있는 데이터베이스를 **DNS(Domain Name System)** 이라고 부른다.
+- **도메인 네임으로 입력하면 DNS를 이용해 컴퓨터는 IP 주소를 받아 찾아갈 수 있다.**
+
+## 작동 방식
+
+[![img](https://camo.githubusercontent.com/1d907c5b70e225e976ae41bb729c65e4c7e047a550aea90cd7fc7576aff72f32/68747470733a2f2f74312e6461756d63646e2e6e65742f6366696c652f746973746f72792f393946303939333735433132344232443032)](https://camo.githubusercontent.com/1d907c5b70e225e976ae41bb729c65e4c7e047a550aea90cd7fc7576aff72f32/68747470733a2f2f74312e6461756d63646e2e6e65742f6366696c652f746973746f72792f393946303939333735433132344232443032)
+
+1. 사용자가 브라우저에 도메인 네임([www.naver.com)을](http://www.naver.xn--com)-8040a/) 입력한다.
+2. 사용자가 입력한 URL 주소 중에서 도메인 네임(Domain Name) 부분을 DNS 서버에서 검색하고, DNS 서버에서 해당 도메인 네임에 해당하는 IP 주소를 찾아 사용자가 입력한 URL 정보와 함께 전달한다.
+3. 페이지 URL 정보와 전달받은 IP 주소는 HTTP 프로토콜을 사용하여 HTTP 요청 메시지를 생성하고, 이렇게 생성된 HTTP 요청 메시지는 TCP 프로토콜을 사용하여 인터넷을 거쳐 해당 IP 주소의 컴퓨터로 전송된다.
+4. 이렇게 도착한 HTTP 요청 메시지는 HTTP 프로토콜을 사용하여 웹 페이지 URL 정보로 변환되어 웹 페이지 URL 정보에 해당하는 데이터를 검색한다.
+5. 검색된 웹 페이지 데이터는 또 다시 HTTP 프로토콜을 사용하여 HTTP 응답 메시지를 생성하고 TCP 프로토콜을 사용하여 인터넷을 거쳐 원래 컴퓨터로 전송된다.
+6. 도착한 HTTP 응답 메시지는 HTTP 프로토콜을 사용하여 웹 페이지 데이터로 변환되어 웹 브라우저에 의해 출력되어 사용자가 볼 수 있게 된다.
+
+이렇게 말하면 어느 정도 설명할 수 있지만, 뭔가 부족하다. 조금 더 알아보자.
+
+## DHCP & ARP
+
+대부분의 가정집에서는 `DHCP`로 인터넷 접속을 하고 있다. DHCP는 Dynamic Host Configuration Protocol의 약자로, 호스트의 IP 주소 및 TCP / IP 설정을 클라이언트에 자동으로 제공하는 프로토콜이다. 사용자의 PC는 DHCP 서버에서 **사용자 자신의 IP 주소, 가장 가까운 라우터의 IP 주소, 가장 가까운 DNS 서버의 IP 주소**를 받는다. 이후, ARP 프로토콜을 이용하여 IP 주소를 기반으로 가장 가까운 라우터의 MAC 주소를 알아낸다.
+
+[![img](https://camo.githubusercontent.com/a73920d2cb4265753f0c557225fb233d1710818c60502355a0e0ba92446af6da/68747470733a2f2f74312e6461756d63646e2e6e65742f6366696c652f746973746f72792f323637424343343035383730393134393230)](https://camo.githubusercontent.com/a73920d2cb4265753f0c557225fb233d1710818c60502355a0e0ba92446af6da/68747470733a2f2f74312e6461756d63646e2e6e65742f6366696c652f746973746f72792f323637424343343035383730393134393230)
+
+> DHCP 서버의 동작 개념도 - 클라이언트가 인터넷 접속을 시도하면 IP와 기본 정보를 제공해준다.
+
+## IP 정보 수신
+
+위의 과정을 통해 외부와 통신할 준비를 마쳤으므로, DNS Query를 DNS 서버에 전송한다. DNS 서버는 이에 대한 결과로 웹 서버의 IP 주소를 사용자 PC에 돌려준다. DNS 서버가 도메인에 대한 IP 주소를 송신하는 과정은 약간 복잡하다.
+
+> 과정 ([www.naver.com](http://www.naver.com/) 이라고 가정하자.)
+
+사용자의 PC는 가장 먼저 지정된 DNS 서버(우리나라의 경우, 통신사별로 지정된 DNS 서버가 있다.)에 DNS Query를 송신한다. 그 후 지정된 DNS 서버는 **Root 네임서버**에 [www.naver.com을](http://www.naver.xn--com-of0o/) 질의하고, Root 네임서버는 .com 네임서버의 ip 주소를 알려준다.
+
+그 후 **.com 네임서버**에 [www.naver.com을](http://www.naver.xn--com-of0o/) 질의하면 naver.com 네임서버의 ip 주소를 받고 그곳에 질의를 또 송신하면 [www.naver.com의](http://www.naver.xn--com-yh0o/) IP 주소를 수신하게 된다.
+
+이와 같이 여러번 왔다갔다 하는 이유는, 도메인의 계층화 구조에 따라 DNS 서버도 계층화 되어있기 때문이다. 이렇게 계층화되어 있으므로 도메인의 가장 최상단, 즉 가장 뒷쪽(.com, .kr 등등)을 담당하는 DNS 서버는 전세계에 13개 뿐이다.
+
+## 웹 서버 접속
+
+이제 웹 서버의 IP 주소까지 알았다. Http Request를 위헤 TCP Socket을 개방하고 연결한다. 이 과정에서 3-way hand shaking 과정이 일어난다. TCP 연결에 성공하면, Http Request가 TCP Socket을 통해 보내진다. 이에 대한 응답으로 웹 페이지의 정보가 사용자의 PC로 들어온다.
+
+## 참고
+
+- [[Network\] 주소창에 www.naver.com을 치면 일어나는 일](https://sophia2730.tistory.com/entry/DNS-주소창에-wwwnavercom을-치면-일어나는-일)
+- [IT 기술면접 준비자료 당신이 브라우저로 웹사이트에 접속할 때 일어나는 일들 (부제: DNS 이야기)](https://preamtree.tistory.com/35)
+- 브라우저로 웹 사이트에 접속할 때 과정

@@ -335,7 +335,7 @@ def solution(answers):
 
 
 ​    
-    return answer
+​    return answer
 ```
 </div>
 </details>
@@ -418,6 +418,28 @@ def solution(answers):
 <details>
 <summary>View Code...</summary>
 <div markdown="1">
+
+```python
+
+```
+
+</div>
+</details>
+
+---
+
+# 동적계획법(Dynamic Programming)
+
+## N으로 표현
+
+source : [LEO](https://programmers.co.kr/questions/19805) | [grurumee92](https://gurumee92.tistory.com/164)
+
+⚡[문제링크](https://programmers.co.kr/learn/courses/30/lessons/42895)
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
 
 ```python
 

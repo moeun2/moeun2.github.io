@@ -4,7 +4,7 @@ tags: [CodingTest, BJ]
 style: fill
 color: info
 description: I'm solving the Class3 coding problems of  "solved.ac" and summarizing.
-last_modified_at: 10 June 2022
+last_modified_at: 13 June 2022
 ---
 
 # 제로

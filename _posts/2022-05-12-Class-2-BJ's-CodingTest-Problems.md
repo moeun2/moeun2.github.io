@@ -4,6 +4,7 @@ tags: [CodingTest, BJ]
 style: fill
 color: info
 description: I'm solving the Class2 coding problems of  "solved.ac" and summarizing. 
+last_modified_at: 13 June 2022 
 ---
 
 
@@ -537,6 +538,8 @@ for _ in range(int(input())):
 </div>
 </details>
 
+---
+
 
 
 # 큐
@@ -588,6 +591,47 @@ for _ in range(n):
             queue.append(back)
         else:
             print(-1)
+```
+
+</div>
+</details>
+
+---
+
+# 설탕배달
+
+| 문제번호 | class  |  level  | language |
+| :------: | :----: | :-----: | :------: |
+|   2839   | class2 | Silver4 |  python  |
+
+⚡[문제링크](https://www.acmicpc.net/problem/2839)
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
+
+```python
+n = int(input())
+dp = [list() for _ in range(n+1)]
+dp[1] = [3,5]
+answer = -1
+if n == 3 or n == 5:
+    answer = 1
+for i in range(1,n):
+    temp = []
+    for j in dp[i]:
+        temp.append(j + 3)
+        temp.append(j + 5)
+    temp = list(set(temp))
+    dp[i+1] = temp
+    if min(temp) > n:
+        break
+    if n in temp:
+        answer = i+1
+        break
+
+print(answer)
 ```
 
 </div>

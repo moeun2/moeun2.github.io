@@ -28,3 +28,8 @@
   text-align: center;
   border: 2px solid currentcolor;
 }
+/*toc가 아닐때의 list의 head를 grey색으로 변경*/
+.list-grey {
+  background-color: #586069 !important;
+  border-color: #586069 !important;
+}
