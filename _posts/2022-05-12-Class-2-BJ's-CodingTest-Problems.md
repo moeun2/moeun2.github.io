@@ -1,10 +1,10 @@
 ---
-2title: Class2_BJ's CodingTest Problems[Done]
+title: Class2_BJ's CodingTest Problems[Done]
 tags: [CodingTest, BJ]
 style: fill
 color: info
 description: I'm solving the Class2 coding problems of  "solved.ac" and summarizing. 
-last_modified_at: 13 June 2022 
+last_modified_at: 15 June 2022 
 ---
 
 
