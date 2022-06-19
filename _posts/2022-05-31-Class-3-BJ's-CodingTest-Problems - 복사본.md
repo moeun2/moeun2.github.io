@@ -4,7 +4,7 @@ tags: [CodingTest, BJ]
 style: fill
 color: info
 description: I'm solving the Class3 coding problems of  "solved.ac" and summarizing.
-last_modified_at: 15 June 2022
+last_modified_at: 19 June 2022
 ---
 
 # 제로
@@ -462,6 +462,57 @@ for _ in range(m):
     else:
         idx = poketmon[question.upper()]
         print(idx)
+```
+
+</div>
+</details>
+
+---
+
+# 집합
+
+| 문제번호 | class  | level   | language |
+| -------- | :----: | ------- | -------- |
+| 11723    | class3 | silver5 | python   |
+
+⚡[문제링크](https://www.acmicpc.net/problem/11723)
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
+
+
+```python
+import sys
+
+input = sys.stdin.readline
+m = int(input().rstrip())
+all = [str(x) for x in range(1,21)]
+s = set()
+for _ in range(m):
+    op = input().split()
+
+    if op[0] == 'add':
+        s.add(op[1])
+    elif op[0] == 'remove':
+        s.discard(op[1])
+    elif op[0] == "check":
+        if op[1] in s:
+            print(1)
+        else:
+            print(0)
+    elif op[0] == 'toggle':
+        if op[1] in s:
+            s.discard(op[1])
+        else:
+            s.add(op[1])
+    elif op[0] == 'all':
+        s.clear()
+        s = set(all)
+    elif op[0] == 'empty':
+        s.clear()
+
 ```
 
 </div>
