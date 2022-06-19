@@ -56,7 +56,7 @@ source :
 
 {% capture list_items %}
 설탕배달,https://moeun2.github.io/blog/Class-2-BJ's-CodingTest-Problems#설탕배달
-N으로 표현,
+N으로 표현,https://moeun2.github.io/blog/Programmers's-CodingTest-Problems#n으로-표현
 {% endcapture %}
 {% include elements/list.html title="DP Problems" %}
 
