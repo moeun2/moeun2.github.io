@@ -1,22 +1,18 @@
 ---
 title: OpenVidu 설치 및 AWS에 배포하는 방법
 tags: [Server]
-style: 
-color: 
+style: border
+color: primary
 description:  How to Deploy OpenVidu CE on AWS
 last_modified_at: 19 June 2022
 ---
 
 
 
-🏞️ Env : AWS Ubuntu
-
-
-
 # Openvidu 명령어
 
 
-- start openvidu : ./openvidu start
+* start openvidu : ./openvidu start
 - sopt openvidu : ./openvidu stop
 - Restart OpenVidu : ./openvidu restart
 
@@ -141,13 +137,13 @@ https://<DOMAIN_OR_PUBLIC_IP>:<HTTPS_PORT>/dashboard/
 $ sudo systemctl stop nginx
 ```
 
-1. openvidu certificates 삭제하기
+2. openvidu certificates 삭제하기
 
 ```java
 $ sudo rm -rf /opt/openvidu/certificates/*
 ```
 
-1. openvidu restart
+3. openvidu restart
 
 ```java
 $ ./openvidu restart
