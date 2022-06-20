@@ -517,3 +517,41 @@ for _ in range(m):
 
 </div>
 </details>
+
+---
+
+# 파도반 수열
+
+| 문제번호 | class  | level   | language |
+| -------- | :----: | ------- | -------- |
+| 9461     | class3 | silver3 | python   |
+
+⚡[문제링크](https://www.acmicpc.net/problem/9461)
+
+⚡ DP, 규칙만 알면 풀 수 있언던 문제
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
+
+```python
+import sys
+
+input = sys.stdin.readline
+t = int(input().rstrip())
+p = [0] * 100
+p[0] = 1
+p[1] = 1
+p[2] = 1
+start = 3
+for _ in range(t):
+    n = int(input().rstrip())
+    for i in range(start, n):
+        p[i] = p[i-2] + p[i-3]
+    print(p[n-1])
+
+```
+
+</div>
+</details>
