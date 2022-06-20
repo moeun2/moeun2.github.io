@@ -555,3 +555,33 @@ for _ in range(t):
 
 </div>
 </details>
+
+---
+
+# 2×n 타일링 2
+
+| 문제번호 | class  | level   | language |
+| -------- | :----: | ------- | -------- |
+| 11727    | class3 | silver3 | python   |
+
+⚡[문제링크](https://www.acmicpc.net/problem/11727)
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
+```python
+import sys
+
+input = sys.stdin.readline
+n = int(input())
+dp = [0 for _ in range(n+1)]
+dp[0] = 1
+dp[1] = 1
+for i in range(2,n+1):
+    dp[i] = dp[i-1]+dp[i-2]*2
+print(dp[-1] % 10007)
+```
+
+</div>
+</details>
