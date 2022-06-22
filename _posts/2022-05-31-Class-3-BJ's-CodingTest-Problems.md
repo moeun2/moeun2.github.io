@@ -585,3 +585,72 @@ print(dp[-1] % 10007)
 
 </div>
 </details>
+
+---
+
+# 잃어버린 괄호
+
+| 문제번호 | class  | level   | language |
+| -------- | :----: | ------- | -------- |
+| 1541     | class3 | silver3 | python   |
+
+⚡[문제링크](https://www.acmicpc.net/problem/1541)
+
+⚡ 쉽게 생각했다고 생각했는데 너무 어렵게 접근했던 문제. 
+
+<details>
+<summary>View My Code...</summary>
+<div markdown="1">
+```python
+import sys
+import re
+input = sys.stdin.readline
+operations = input().rstrip()
+operations = re.split('([+|-])', operations)
+
+stack = []
+isMinus = False
+for op in operations[:-1]:
+    if op == '-':
+        if not isMinus:
+            stack.append("-(")
+            isMinus = True
+        else:
+            stack.append(")-(")
+        continue
+    if op == '+':
+        stack.append(op)
+    else:
+        stack.append(str(int(op)))
+if isMinus:
+    stack.append(str(int(operations[-1]))+")")
+else:
+    stack.append(str(int(operations[-1])))
+
+print(eval(''.join(stack)))
+```
+
+</div>
+</details>
+
+<details>
+<summary>View Other Code...</summary>
+<div markdown="1">
+
+
+```python
+input = sys.stdin.readline
+arr = input().split('-')
+s = 0
+
+for i in arr[0].split('+'):
+    s += int(i)
+for i in arr[1:]:
+    for j in i.split('+'):
+        s -= int(j)
+
+print(s)
+```
+
+</div>
+</details>
