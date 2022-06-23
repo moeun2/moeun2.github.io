@@ -638,7 +638,7 @@ print(eval(''.join(stack)))
 <div markdown="1">
 
 
-```python
+​```python
 input = sys.stdin.readline
 arr = input().split('-')
 s = 0
@@ -650,6 +650,50 @@ for i in arr[1:]:
         s -= int(j)
 
 print(s)
+```
+
+</div>
+</details>
+
+---
+
+# 이중 우선순위 큐
+
+| 문제번호 | class  | level   | language |
+| -------- | :----: | ------- | -------- |
+| 1541     | class3 | silver3 | python   |
+
+⚡[문제링크](https://www.acmicpc.net/problem/1541)
+
+<details>
+<summary>View My Code...</summary>
+<div markdown="1">
+
+```python
+import sys
+import heapq
+input = sys.stdin.readline
+
+T = int(input().rstrip())
+for t in range(T):
+    K = int(input().rstrip())
+    Q = []
+    for k in range(K):
+        op = input().split()
+        op[1] = int(op[1])
+        if op[0] == 'I':
+            heapq.heappush(Q, op[1])
+        elif op[0] == 'D' and Q:
+            if op[1] == 1:
+                Q.remove(max(Q))
+            else:
+                heapq.heappop(Q)
+
+        print(Q)
+    if not Q:
+        print("EMPTY")
+    else:
+        print(max(Q), min(Q))
 ```
 
 </div>
