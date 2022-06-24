@@ -636,8 +636,6 @@ print(eval(''.join(stack)))
 <details>
 <summary>View Other Code...</summary>
 <div markdown="1">
-
-
 ​```python
 input = sys.stdin.readline
 arr = input().split('-')
@@ -661,39 +659,56 @@ print(s)
 
 | 문제번호 | class  | level   | language |
 | -------- | :----: | ------- | -------- |
-| 1541     | class3 | silver3 | python   |
+| 7662    | class3 | gold4 | python   |
 
-⚡[문제링크](https://www.acmicpc.net/problem/1541)
+⚡[문제링크](https://www.acmicpc.net/problem/7662)
 
 <details>
-<summary>View My Code...</summary>
+<summary>View Code...</summary>
 <div markdown="1">
 
 ```python
 import sys
 import heapq
-input = sys.stdin.readline
 
+input = sys.stdin.readline
 T = int(input().rstrip())
 for t in range(T):
     K = int(input().rstrip())
     Q = []
+    maxQ = []
+    visited = [False] * 1000001
     for k in range(K):
         op = input().split()
         op[1] = int(op[1])
         if op[0] == 'I':
-            heapq.heappush(Q, op[1])
-        elif op[0] == 'D' and Q:
-            if op[1] == 1:
-                Q.remove(max(Q))
-            else:
-                heapq.heappop(Q)
+            heapq.heappush(Q, (op[1], k))
+            heapq.heappush(maxQ, (-op[1], k))
 
-        print(Q)
+        elif op[0] == 'D':
+            if op[1] == 1 and maxQ:
+                while maxQ and visited[maxQ[0][1]]:
+                    visited[maxQ[0][1]] = False
+                    heapq.heappop(maxQ)
+                if maxQ:
+                    visited[maxQ[0][1]] = True
+                    heapq.heappop(maxQ)
+            elif op[1] == -1 and Q:
+                while Q and visited[Q[0][1]]:
+                    visited[Q[0][1]] = False
+                    heapq.heappop(Q)
+                if Q:
+                    visited[Q[0][1]] = True
+                    heapq.heappop(Q)
+
+    while Q and visited[Q[0][1]]:
+        heapq.heappop(Q)
+    while maxQ and visited[maxQ[0][1]]:
+        heapq.heappop(maxQ)
     if not Q:
         print("EMPTY")
     else:
-        print(max(Q), min(Q))
+        print(-maxQ[0][0], Q[0][0])
 ```
 
 </div>
