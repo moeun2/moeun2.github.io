@@ -601,6 +601,7 @@ print(dp[-1] % 10007)
 <details>
 <summary>View My Code...</summary>
 <div markdown="1">
+
 ```python
 import sys
 import re
@@ -636,7 +637,8 @@ print(eval(''.join(stack)))
 <details>
 <summary>View Other Code...</summary>
 <div markdown="1">
-​```python
+
+```python
 input = sys.stdin.readline
 arr = input().split('-')
 s = 0
