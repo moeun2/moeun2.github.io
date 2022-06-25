@@ -715,3 +715,68 @@ for t in range(T):
 
 </div>
 </details>
+
+---
+
+# 색종이 만들기
+
+| 문제번호 | class  | level   | language |
+| -------- | :----: | ------- | -------- |
+| 2630     | class3 | Silver2 | python   |
+
+⚡[문제링크](https://www.acmicpc.net/problem/2630)
+
+⚡분할정복
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
+
+```python
+import sys
+
+input = sys.stdin.readline
+n = int(input().rstrip())
+papers = [['X' for _ in range(n+1)]] + [['X']+input().split() for _ in range(n)]
+
+one_cnt = 0
+zero_cnt = 0
+
+def check(start_x, start_y, end_x, end_y, N):
+    # print(start_x, start_y, end_x, end_y, N)
+    global one_cnt, zero_cnt
+    one = True
+    for i in range(start_x, end_x+1):
+        for j in range(start_y, end_y +1):
+            if papers[i][j] != '1':
+                # print(i,j,papers[i][j])
+                one = False
+                break
+    zero = True
+    for i in range(start_x, end_x+1):
+        for j in range(start_y, end_y+1):
+            if papers[i][j] != '0':
+                zero = False
+                break
+
+    if one:
+        one_cnt += 1
+        # print("One Cnt ++")
+    if zero:
+        zero_cnt += 1
+        # print("Zero Cnt ++")
+
+    if not one and not zero:
+        check(start_x, start_y, start_x + N // 2-1, start_y + N // 2-1, N // 2)
+        check(start_x , start_y+ N // 2, end_x-N//2, end_y, N // 2)
+        check(start_x+ N // 2, start_y , end_x, end_y - N // 2, N // 2)
+        check(start_x + N // 2, start_y + N // 2 , end_x, end_y, N // 2)
+
+check(1, 1, n, n, n)
+print(zero_cnt)
+print(one_cnt)
+```
+
+</div>
+</details>
