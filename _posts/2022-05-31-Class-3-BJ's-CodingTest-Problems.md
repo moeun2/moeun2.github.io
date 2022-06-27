@@ -4,7 +4,7 @@ tags: [CodingTest, BJ]
 style: fill
 color: info
 description: I'm solving the Class3 coding problems of  "solved.ac" and summarizing.
-last_modified_at: 19 June 2022
+last_modified_at: 27 June 2022
 ---
 
 # 제로
@@ -776,6 +776,62 @@ def check(start_x, start_y, end_x, end_y, N):
 check(1, 1, n, n, n)
 print(zero_cnt)
 print(one_cnt)
+```
+
+</div>
+</details>
+
+---
+
+# AC
+
+| 문제번호 | class  | level | language |
+| -------- | :----: | ----- | -------- |
+| 5430     | class3 | Gold5 | python   |
+
+⚡[문제링크](https://www.acmicpc.net/problem/5430)
+
+⚡ 구현, 문자열, 덱
+
+⚡ 33%에서 틀렸던 이유 : 출력을 잘못함. 문제를 볼 때 예제 출력이랑 똑같은지 다시한 번 확인하자. 공백 주의!
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
+
+
+```python
+import sys
+from collections import deque
+
+input = sys.stdin.readline
+
+T = int(input().rstrip())
+for t in range(T):
+    P = input().rstrip()
+    n = int(input().rstrip())
+    top = True  # top == true -> start / false -> end
+    array = deque(input().rstrip().replace("[", "").replace("]", "").split(","))
+    if n == 0:
+        array = []
+    try:
+        for p in P:
+            if p == 'R':
+                top = False if top == True else True
+            else:
+                if top:
+                    array.popleft()
+                elif not top:
+                    array.pop()
+        # array = list(map(int, array))
+        if not top:
+            array.reverse()
+        answer = '['+','.join(array)+']'
+        print(answer)
+    except (Exception,):
+        print("error")
+
 ```
 
 </div>
