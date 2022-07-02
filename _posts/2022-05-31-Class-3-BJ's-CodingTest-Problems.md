@@ -836,3 +836,80 @@ for t in range(T):
 
 </div>
 </details>
+
+
+
+---
+
+# Z
+
+| 문제번호 | class  | level   | language |
+| -------- | :----: | ------- | -------- |
+| 1074     | class3 | Silver1 | python   |
+
+⚡[문제링크](https://www.acmicpc.net/problem/1074)
+
+⚡ 시간초과, 메모리 초과 주의
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
+
+
+
+```python
+import sys
+sys.setrecursionlimit(2500)
+input = sys.stdin.readline
+n,r,c = map(int, input().split())
+array = [[-1 for _ in range(2**n+1)]]+[[-1] * (2**n+1) for _ in range(2**n)]
+
+cnt = 0
+res = -1
+def check(start_x,start_y, end_x, end_y,  N):
+    # print(start_x,start_y, end_x, end_y,  N)
+    global cnt,res
+    # if array[r+1][c+1] != -1:
+    #     return array[r][c]
+    if res != -1:
+        return
+
+    if N != 1:
+        check(start_x,start_y,end_x//2,end_y//2 , N-1)
+        check(start_x, end_y//2+1, end_x//2 , end_y, N-1)
+        check(end_x//2+1, start_y, end_x, end_y//2, N-1)
+        check(end_x // 2 + 1, end_y//2+1, end_x, end_y, N-1)
+    else:
+        # print("r,c",r+1,c+1)
+        if start_x == r+1 and start_y == c+1:
+            # print(1)
+            res = cnt
+            return cnt
+        elif start_x == r+1 and start_y+1 == c+1:
+            # print(2)
+            res = cnt+1
+            return cnt+1
+        elif end_x == r+1 and end_y-1 == c+1:
+            # print(3)
+            res = cnt+2
+            return cnt+2
+        elif end_x == r+1 and end_y == c+1:
+            # print(4)
+            res = cnt+3
+            return cnt+3
+        else:
+            # print(5)
+            cnt = cnt + 4
+        # array[start_x][start_y] = cnt
+        # array[start_x][start_y+1] = cnt+1
+        # array[end_x][end_y-1] = cnt+2
+        # array[end_x][end_y] = cnt+3
+
+check(1,1,2**n,2**n,n)
+print(res)
+
+```
+
+</div>
+</details>
