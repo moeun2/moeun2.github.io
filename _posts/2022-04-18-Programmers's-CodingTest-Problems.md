@@ -447,3 +447,29 @@ source : [LEO](https://programmers.co.kr/questions/19805) | [grurumee92](https:/
 
 </div>
 </details>
+
+
+
+# 연습문제
+
+## 124나라의 숫자
+
+⚡[문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/12899)
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
+
+
+```python
+def solution(n):
+    answer = ''
+    return answer
+```
+
+</div>
+</details>
+
+---
+
