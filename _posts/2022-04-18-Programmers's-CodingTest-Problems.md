@@ -473,3 +473,58 @@ def solution(n):
 
 ---
 
+## 문자열 압축
+
+⚡[문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/12899)
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
+
+
+
+```python
+def solution(s):
+    answer = []
+        
+    # s = "a"
+    if len(s) == 1:
+        return 1
+    for i in range(1,len(s)):
+
+        temp_lst = list(map(''.join,zip(*[iter(s)]* i)))
+        for t in range(len(temp_lst)):
+            current = temp_lst[t]
+            cnt = 1
+            if current == -1:
+                continue
+            for j in range(t+1, len(temp_lst)):
+                if current == temp_lst[j]:
+                    cnt += 1
+                    temp_lst[j] = -1
+                else:
+                    break
+            if cnt > 1:
+                temp_lst[t] = str(cnt) + current
+
+        na = len(s) % i
+        if na != 0:
+            temp_lst += s[-(len(s)%i):]
+        temp_lst = list(filter(lambda x : x!= -1, temp_lst))
+        temp_lst = ''.join(temp_lst)
+        answer.append(len(temp_lst))
+        # print(temp_lst)
+            
+                
+        
+    
+    
+    return min(answer)
+```
+
+</div>
+</details>
+
+---
+
