@@ -4,7 +4,7 @@ tags: [CodingTest, Programmers]
 style: fill
 color: info
 description: I'm solving coding problems of "Programmers" and summarizing.
-last_modified_at: 06 June 2022
+last_modified_at: 14 July 2022
 ---
 
 
@@ -12,6 +12,25 @@ last_modified_at: 06 June 2022
 
 
 # Hash
+
+## 폰켓몬
+
+⚡[문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/1845)
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
+
+```python
+def solution(nums):    
+    return min(len(nums)//2,len(set(nums)))
+```
+
+</div>
+</details>
+
+---
 
 ## 완주하지 못한 선수
 
