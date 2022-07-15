@@ -547,3 +547,40 @@ def solution(s):
 
 ---
 
+## 신고 결과 받기
+
+⚡[문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/92334)
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
+
+
+```python
+def solution(id_list, report, k):
+    answer = []
+    report_result = dict()
+    message_result = dict()
+    for r in report:
+        a,b = r.split(" ")
+        report_result[b] = report_result.get(b, []) + [a]
+        message_result[a] = list(set(message_result.get(a,[])+[b]))
+    # print(message_result)
+    report_id_list = []
+    for id in id_list:
+        temp = len(set(report_result.get(id,[])))
+        if temp >= k:
+            report_id_list.append(id)
+    for m in id_list:
+        cnt = 0
+        for r in message_result.get(m,[]):
+            if r in report_id_list:
+                cnt += 1
+        answer.append(cnt)
+    # print(report_result)
+    return answer
+```
+
+</div>
+</details>
