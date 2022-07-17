@@ -4,7 +4,7 @@ tags: [CodingTest, Programmers]
 style: fill
 color: info
 description: I'm solving coding problems of "Programmers" and summarizing.
-last_modified_at: 14 July 2022
+last_modified_at: 17 July 2022
 ---
 
 
@@ -580,6 +580,28 @@ def solution(id_list, report, k):
         answer.append(cnt)
     # print(report_result)
     return answer
+```
+
+</div>
+</details>
+
+---
+
+## 없는 숫자 더하기
+
+⚡[문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/86051)
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
+
+
+
+```python
+def solution(numbers):
+    exact_numbers = [0,1,2,3,4,5,6,7,8,9]
+    return sum(list(set(exact_numbers) - set(numbers) ))
 ```
 
 </div>
