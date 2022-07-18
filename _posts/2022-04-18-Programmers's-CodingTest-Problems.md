@@ -4,7 +4,7 @@ tags: [CodingTest, Programmers]
 style: fill
 color: info
 description: I'm solving coding problems of "Programmers" and summarizing.
-last_modified_at: 17 July 2022
+last_modified_at: 18 July 2022
 ---
 
 
@@ -602,6 +602,54 @@ def solution(id_list, report, k):
 def solution(numbers):
     exact_numbers = [0,1,2,3,4,5,6,7,8,9]
     return sum(list(set(exact_numbers) - set(numbers) ))
+```
+
+</div>
+</details>
+
+---
+
+## 주차 요금 계산
+
+⚡[문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/92341)
+
+⚡ 문제 풀고 나서 느낀 점 : timedelta가 필요 없고 그냥 분으로 바꿔서 푸는 문제 였단 걸 느낌... 라이브러리 막 사용하지 말자.
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
+
+
+```python
+from datetime import timedelta
+import math
+def solution(fees, records):
+    result = []
+    cars = dict()
+    for record in records:
+        time, carNum , IO = record.split()
+        hour, second = map(int, time.split(":"))
+        time = timedelta(hours = hour, seconds = second * 60 )
+        cars[carNum] = cars.get(carNum, []) + [(time, IO)]
+    for car in cars:
+        carList = cars[car]
+        if len(carList) % 2 != 0:
+            carList += [ (timedelta(hours = 23, seconds = 59 * 60 ), 'OUT')]
+        total_time = timedelta(hours = 0 , seconds = 0)
+        for i in range(0,len(carList),2):
+            total_time += carList[i+1][0] - carList[i][0]
+        total_time = total_time.seconds//60
+        total_cost = 0
+        if total_time > fees[0]:
+            total_cost += (fees[1] + (math.ceil((total_time-fees[0])/fees[2]))* fees[3])
+        else:
+            total_cost = fees[1]
+        result += [(car, total_cost)]
+
+    result.sort()        
+
+    return [x[1] for x in result]
 ```
 
 </div>
