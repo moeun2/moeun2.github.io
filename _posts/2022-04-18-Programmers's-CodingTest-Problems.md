@@ -654,3 +654,27 @@ def solution(fees, records):
 
 </div>
 </details>
+
+---
+
+## 내적
+
+⚡[문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/70128)
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
+
+
+
+```python
+def solution(a, b):
+    answer = 0
+    for i,j in zip(a, b):
+        answer += i*j
+    return answer
+```
+
+</div>
+</details>

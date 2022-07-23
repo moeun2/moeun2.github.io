@@ -265,8 +265,6 @@ Stack과 데이터를 나눈 이유는, 스택 구조의 특성과 전역 변수
 
 ## 인터럽트 발생 처리 과정
 
-[![img]()](https://github.com/gyoogle/tech-interview-for-developer/blob/master/Computer Science/Operating System/Interrupt.md)
-
 주 프로그램이 실행되다가 인터럽트가 발생했다.
 
 현재 수행 중인 프로그램을 멈추고, 상태 레지스터와 PC 등을 스택에 잠시 저장한 뒤에 인터럽트 서비스 루틴으로 간다. (잠시 저장하는 이유는, 인터럽트 서비스 루틴이 끝난 뒤 다시 원래 작업으로 돌아와야 하기 때문)
