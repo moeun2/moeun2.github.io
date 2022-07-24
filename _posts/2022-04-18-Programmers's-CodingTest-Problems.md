@@ -666,13 +666,37 @@ def solution(fees, records):
 <div markdown="1">
 
 
-
-
 ```python
 def solution(a, b):
     answer = 0
     for i,j in zip(a, b):
         answer += i*j
+    return answer
+```
+
+</div>
+</details>
+
+---
+
+## 음양 더하기
+
+⚡[문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/76501)
+
+<details>
+<summary>View Code...</summary>
+<div markdown="1">
+
+
+
+```python
+def solution(absolutes, signs):
+    answer = 0
+    for i,j in zip(absolutes, signs):
+        if not j:
+            answer += (-i)
+        else:
+            answer += i
     return answer
 ```
 
